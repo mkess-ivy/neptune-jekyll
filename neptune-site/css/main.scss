@@ -82,6 +82,7 @@ $on-tv:         1400px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "loader",
         "neptune-theme",
         "neptune-theme_white"
 ;
