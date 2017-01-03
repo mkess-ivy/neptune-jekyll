@@ -22,7 +22,7 @@ layout: default
 <section class="fullwidth clearfix" id="music">
 	<h2 class="section-heading">music</h2>
 	<div class="video-wrapper">
-		<a href="https://vimeo.com/178752679" target="_blank"><!-- Video Link -->
+		<a href="https://vimeo.com/178758716" target="_blank"><!-- Video Link -->
 			<img src="/img/photo-1-color.png" class="primary-img"  />
 			<img src="/img/play-btn-text.png" class="play-btn"  />
 			<img src="/img/photo-1-black.png" class="shadow-img" />
@@ -56,44 +56,28 @@ layout: default
 	<div class="events-text-wrapper">
 		<h2 class="alt1 section-heading">upcoming shows</h2>
 		<div class="events-decoration"></div>
-		<div class="group">
-			<h3><a href="#">The Masquerade</a></h3>
-			<h4 class="event-date">2/21 - Atlanta, Georgia</h4>
-		</div>
-		<div class="group">
-			<h3><a href="#">The Vagabond</a></h3>
-			<h4 class="event-date">2/24 - Miami, Florida</h4>
-		</div>
-		<div class="group">
-			<h3><a href="#">Grand Central</a></h3>
-			<h4 class="event-date">2/25 - Miami, Florida</h4>
-		</div>
-		<div class="group">
-			<h3><a href="#">House of Blues</a></h3>
-			<h4 class="event-date">2/27 - New Orleans, LA</h4>
-		</div>
-		<div class="group">
-			<h3><a href="#">Revention</a></h3>
-			<h4 class="event-date">3/1 - Houston, Texas</h4>
-		</div>
+		<ul class="events-list">
+		{% for upcoming-show in site.data.upcoming-shows %}
+			<li class="group">
+				<h3><a href="{{ upcoming-show.link }}" target="_blank" >{{ upcoming-show.place }}</a></h3>
+				<h4 class="event-date">{{ upcoming-show.date }} - {{ upcoming-show.location }}</h4>
+			</li>
+		{% endfor %}
+		</ul>
 		
 	</div>
 </section>
 
 <section class="section-wrapper" id="press">
 	<h2 class="section-heading">press</h2>
-	<div class="group press-group">
-		<h3><a href="http://www.baltimoresun.com/entertainment/arts/bs-ae-up-and-comers-neptune-the-poet-20160826-story.html" target="_blank">Name to Know: Neptune the Poet</a></h3>
-		<h4 class="press-white">Baltimore Sun</h4>
-	</div>
-	<div class="group press-group">
-		<h3><a href="http://www.baltimoresun.com/features/female-trouble/bal-female-trouble-neptune-the-poet-20161122-story.html" target="_blank">Female Trouble: Neptune the Poet</a></h3>
-		<h4 class="press-white">Female Trouble Podcast</h4>
-	</div>
-	<div class="group press-group">
-		<h3><a href="http://www.baltimoresun.com/88715496-132.html" target="_blank">Up &amp; Comers: Neptune the Poet</a></h3>
-		<h4 class="press-white">Baltimore Sun</h4>
-	</div>
+	<ul class="press-group-list">
+	{% for press-item in site.data.press-items %}
+		<li class="group press-group">
+			<h3><a href="{ press-item.link }" target="_blank">{ press-item.title }</a></h3>
+			<h4 class="press-white">{ press-item.publication }</h4>
+		</li>
+	{% endfor %}
+	</ul>
 </section>
 
 <section class="section-wrapper clearfix" id="footer-widgets">
