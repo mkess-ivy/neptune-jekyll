@@ -11,11 +11,8 @@
 *
 */
 
-
 /* 
-#
 # Foundation
-#
 */
 body {
 	background-color: rgba(238,160,77,0.5) !important;
@@ -29,8 +26,8 @@ li {
 	padding: 0;
 }
 h1 {
-	font-size: 57px;
 	color: white;
+	font-size: 57px;
 	text-transform: uppercase;
 	@include mobile {
 		font-size: 90px;
@@ -40,12 +37,12 @@ h1 {
 	}
 }
 h2 {
-	font-size: 60px;
-	text-transform: uppercase;
 	color: $color-3;
-	text-shadow: 7px 7px rgba(192, 192, 192, 0.3);
-	text-align: center;
+	font-size: 60px;
 	line-height: 44px;
+	text-align: center;
+	text-shadow: 7px 7px rgba(192, 192, 192, 0.3);
+	text-transform: uppercase;
 	@include mobile {
 		line-height: 60px;
 	}
@@ -67,11 +64,11 @@ h2.alt1 {
 }
 h3,
 h3 a {
-	font-size: 24px;
 	color: $color-1;
-	text-align: center;
-	margin: 0;
+	font-size: 24px;
 	line-height: 28px;
+	margin: 0;
+	text-align: center;
 	@include mobile {
 		font-size: 34px;
 		line-height: 34px;
@@ -79,7 +76,7 @@ h3 a {
 	@include tablet {
 		font-size: 28px;
 	}
-	@include desktop {
+	@include laptop {
 		line-height: 30px;
 	}
 }
@@ -87,11 +84,11 @@ h3 a:hover {
 	color: $color-3;
 }
 h4 {
-	font-size: 18px;
 	color: $color-2;
-	text-align: center;
-	margin-top: -5px;
+	font-size: 18px;	
 	margin-bottom: 0;
+	margin-top: -5px;
+	text-align: center;
 	@include mobile {
 		font-size: 22px;
 	}
@@ -99,58 +96,55 @@ h4 {
 		font-size: 18px;
 		text-align: right;
 	}
-	@include desktop {
+	@include laptop {
 		margin-top: 0;
 	}
 }
 .container {
 	margin: 5% 6%;
 	@include tv {
-		width: 1400px;
 		margin: 3% auto;
+		width: 1400px;
 	}
 }
-.section-wrapper {
-	margin-top: 120px;
+.events-text-wrapper .group {
+	margin-bottom: 40px;
 	@include tv {
+		margin: 0 auto 40px;
+		width: 60%;
+	}
+}
+.fullwidth {
+	@include laptop {
+		margin: 0 auto;
+		width: 90%;
+	}
+	@include tv {
+		margin: 0 auto;
 		width: 1400px;
-		margin: 120px auto 0;
 	}
 }
 .section-heading {
 	margin-bottom: 75px;
 }
 .section-heading_bio {
+	margin: 25px auto;
 	text-align: center;
 	width: 78%;
-	margin: 25px auto;
-	
 	@include tablet {
 		margin: -45px auto;
 		text-align: left;
 	}
 }
-.events-text-wrapper .group {
-	margin-bottom: 40px;
+.section-wrapper {
+	margin-top: 120px;
 	@include tv {
-		width: 60%;
-		margin: 0 auto 40px;
-	}
-}
-.fullwidth {
-	@include desktop {
-		width: 90%;
-		margin: 0 auto;
-	}
-	@include tv {
+		margin: 120px auto 0;
 		width: 1400px;
-		margin: 0 auto;
 	}
 }
 /* 
-#
 # Header
-#
 */
 .site-header a {
 	color: #000;
@@ -159,114 +153,129 @@ h4 {
 	color: $color-3;
 }
 .site-logo {
-	text-align: center;
 	margin-top: 30px;
+	text-align: center;
 }
 /* 
-#
 # Hero Section
-#
 */
-.hero-text-wrapper h1 {
-	margin-left: -7px;
-	overflow: hidden;
-	@include mobile {
-		margin-left: -50px;
-	}
-}	
-.subtitle-list {
-	list-style: none;
-	color: $color-1;
-	font-size: 34px;
-	line-height: 35px;
-	text-align: right;
-	text-transform: uppercase;
-	width: 65%;
-	margin-top: 450px;
-	@include mobile {
-		width: 40.5%;
-	}
-	@include large {
-		margin-top: 360px;
-	}
-	@include tablet {
-		margin-top: 180px;
-		width: 42.5%;
-	}
-	@include desktop {
-		width: 42.5%;
-	}
-	@include tv {
-		width: 46%;
-		font-size: 50px;
-		line-height: 50px;
-	}
-}
-
 .hero-area {
-	position: relative;
-	min-height: 100vh;
 	margin-top: 50px;
+	min-height: 100vh;
+	position: relative;
 	@include small {
 		min-height: 120vh;
 	}
 	@include tv {
-		max-width: 1400px;
 		margin: 50px auto;
+		max-width: 1400px;
 	}
 }
 .hero-img {
 	background: url('/img/neptune-hero_v2.jpg');
-	min-height: 100vh;
-	width: 75%;
-	right: 0;
-	position: relative;
-	z-index: 1;
 	background-repeat: no-repeat;
 	float: right;
+	min-height: 100vh;
+	position: relative;
+	right: 0;
+	width: 75%;
+	z-index: 1;
 	@include small {
 		background: url('/img/neptune-hero_v2.jpg');
-		background-size: cover;
 		background-position: center center;
+		background-size: cover;
 	}
 }
 .hero-text-wrapper {
-	z-index: 200;
 	position: absolute;
 	top: 180px;
+	z-index: 200;
 	@include tablet {
 		left: 5px;
 	}
-	@include desktop {
+	@include laptop {
 		left: 65px;
 	}
 	@include tv {
 		top: 400px;
 	}
 }
-/* 
-#
-# Music + Video Section
-#
-*/
-.video-wrapper {
-	height: 200px;
-	width: 80%;
-	margin: 0 auto;
-	border: 10px solid white;
-	position: relative;
+.hero-text-wrapper h1 {
+	margin-left: -7px;
+	overflow: hidden;
 	@include mobile {
-		width: 60%;
-		height: 300px;
+		margin-left: -15px;
+	}
+}
+.subtitle-list {
+	color: $color-1;
+	font-size: 34px;
+	line-height: 35px;
+	list-style: none;
+	margin-top: 150px;
+	text-align: right;
+	text-transform: uppercase;
+	width: 65%;
+	@include mobile {
+		margin-top: 120px;
+		width: 40.5%;
 	}
 	@include tablet {
-		width: 47%;
-		float: left;
+		width: 45%;
+	}
+	@include desktop {
+		width: 50%;
+	}
+	@include tv {
+		font-size: 50px;
+		line-height: 50px;
+	}
+}
+/* 
+# Music + Video Section
+*/
+.play-btn_alt {
+	color: white;
+	font-size: 50px;
+	margin-top: 12vh;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 500;
+	@include medium {
+		margin-top: 20vh;
+	}
+	@include mobile {
+		margin-top: 25vh;
+	}
+	/*@include desktop {
+		margin-top: 25vh;
+	}*/
+}
+.primary-img {
+	position: absolute;
+	top: 35px;
+	z-index: 100;
+	@include laptop {
+		left: 10px;
+		top: 25px;
+		width: 95%;
+	}
+}
+.shadow-img {
+	position: absolute;
+	left: 20px;
+	top: 60px;
+	z-index: 1;
+	@include laptop {
+		left: 45px;
+		top: 55px;
+		width: 95%;
 	}
 }
 .soundcloud {
-	width: 75%;
 	margin: 100px auto 0;
+	width: 75%;
 	@include medium {
 		margin-top: 150px;
 	}
@@ -274,72 +283,42 @@ h4 {
 		width: 75%;
 	}
 	@include tablet {
-		width: 43%;
 		float: right;
-		margin-top: 50px;
 		margin-right: 10px;
+		margin-top: 50px;
+		width: 43%;
 	}
 }
-.primary-img {
-	z-index: 100;
-	position: absolute;
-	top: 35px;
-	@include desktop {
-		left: 10px;
-		top: 25px;
-		width: 95%;
-	}
-}
-.shadow-img {
-	z-index: 1;
-	position: absolute;
-	top: 60px;
-	left: 20px;
-	@include desktop {
-		left: 45px;
-		top: 55px;
-		width: 95%;
-	}
-}
-.play-btn {
-	z-index: 105;
-	position: absolute;
-	width: 40%;
-	top: 110px;
-	left: 80px;
-	@include large {
-		top: 120px;
-		left: 110px;
-	}
-	@include desktop {
-		top: 165px;
-		left: 180px;
-	}
-}
-.play-btn_alt {
+.video-wrapper {
+	border: 10px solid white;
+	height: 200px;
+	margin: 0 auto;
 	position: relative;
-	z-index: 500;
-	color: white;
-	text-transform: uppercase;	
-	margin-top: 12vh;
-	text-align: center;
-	font-size: 50px;
-	@include desktop {
-		margin-top: 15vh;
+	width: 80%;
+	@include mobile {
+		height: 350px;
+		/*width: 60%;*/
 	}
+	@include tablet {
+		width: 50%;
+	}
+	/*  Waiting to Add Soundcloud Playlist back to layout
+	@include tablet {
+		float: left;
+		width: 47%;
+	}*/
 }
 /* 
-#
 # Bio
-#
 */
 .body-text {
+	color: $color-4;
 	font-family: $font-2;
+	font-size: 20px;
 	line-height: 30px;
+	margin: 0 auto;
 	text-align: center;
 	width: 88%;
-	margin: 0 auto;
-	font-size: 20px;
 	@include mobile {
 		width: 65%;
 	}
@@ -347,117 +326,13 @@ h4 {
 		font-size: 24px;
 		line-height: 36px;
 	}
-	@include desktop {
+	@include laptop {
 		width: 56%;
 	}
 }
-
 /* 
-#
 # Events
-#
 */
-.events-img-wrapper {
-	position: relative;
-	margin-bottom: 100px;
-	@include tablet {
-		float: left;
-		width: 40%;
-	}
-	@include desktop {
-		width: 48%;
-	}
-}
-.events-group {
-	width: 80%;
-	margin: 0 auto;
-	@include large {
-		width: 70%;
-	}
-	@include tablet {
-		width: 90%;
-	}
-	@include tv {
-		width: 55%;
-	}
-}
-.events-primary-img {
-	position: relative;
-	z-index: 3;
-}
-.events-sub-img {
-	position: absolute;
-	z-index: 1;
-	top: 15px;
-}
-.photo-1 .events-sub-img {
-	left: 45px;
-	width: 80%;
-	@include mobile {
-		left: 65px;
-	}
-	@include large {
-		width: 70%;
-		left: 115px;
-	}
-	@include tablet {
-		left: 90px;
-	}
-	@include desktop {
-		width: 70%;
-		left: 140px;
-		top: 30px;
-	}
-	@include tv {
-		width: 55%;
-		left: 170px;
-	}
-}
-.photo-2 .events-sub-img {
-	left: 15px;
-}
-.photo-2 {
-	@include tablet {
-		left: 70px;
-	}
-	@include desktop {
-		left: 75px;
-	}
-	@include tv {
-		margin-right: 25px;
-	}
-}
-.photo-3 .events-sub-img {
-	left: 15px;
-	@include mobile {
-		left: 22px;
-	}
-	@include tablet {
-		left: 15px;
-	}
-	@include desktop {
-		left: 20px;
-	}
-}
-.photo-group {
-	margin-top: 75px;
-	position: relative;
-}
-.events-text-wrapper {
-	position: relative;
-	@include tablet {
-		float: right;
-		width: 50%;
-		margin-right: 20px;
-	}
-	@include desktop {
-		width: 40%;
-		margin-right: 50px;
-	}
-	@include tv {
-		float: left;
-	}
-}
 .event-date {
 	@include mobile {
 		margin-right: 30px;
@@ -468,12 +343,12 @@ h4 {
 	}
 }
 .events-decoration {
-	width: 55%;
+	background: rgba(192,155,155,0.2);
+	left: 130px;
 	min-height: 380px;
 	position: absolute;
-	left: 130px;
 	top: 220px;
-	background: rgba(192,155,155,0.2);
+	width: 55%;
 	@include mobile {
 		left: 180px;
 		top: 280px;
@@ -493,72 +368,139 @@ h4 {
 		top: 330px;
 	}
 }
+.events-group {
+	margin: 0 auto;
+	width: 80%;
+	@include large {
+		width: 70%;
+	}
+	@include tablet {
+		width: 90%;
+	}
+	@include tv {
+		width: 55%;
+	}
+}
+.events-img-wrapper {
+	margin-bottom: 100px;
+	position: relative;
+	@include tablet {
+		float: left;
+		width: 40%;
+	}
+	@include laptop {
+		width: 48%;
+	}
+}
+.events-primary-img {
+	position: relative;
+	z-index: 3;
+}
+.events-sub-img {
+	left: 20px;
+	position: absolute;
+	top: 15px;
+	z-index: 1;
+}
+.events-text-wrapper {
+	position: relative;
+	@include tablet {
+		float: right;
+		margin-right: 20px;
+		width: 50%;
+	}
+	@include laptop {
+		margin-right: 50px;
+		width: 40%;
+	}
+	@include tv {
+		float: left;
+	}
+}
 .group h3, h4 {
 	position: relative;
 	z-index: 300;
 }
-/* 
-#
-# Press
-#
-*/
-.press-group-list {
+.photo-2 {
 	@include tablet {
-		width: 50%;
-		float: left;
+		left: 70px;
+	}
+	@include laptop {
+		left: 75px;
+	}
+	@include tv {
+		margin-right: 25px;
 	}
 }
-.press-container {
-	width: 50%;
-	margin: 0 auto;
+.photo-group {
+	margin-top: 75px;
+	position: relative;
 }
-.group.press-group {
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 30px;
-}
-.group.press-group:nth-child(2),
-.group.press-group:nth-child(3) {
-	margin-top: 30px;
-}
-
-.group.widget-group:nth-child(2),
-.group.widget-group:nth-child(3) {
-	margin-top: 30px;
-	@include tablet	{
-		margin-top: 0;
-	}
-}
-
-
-.group.press-group h3,
-.group.press-group h4 {
+/* 
+# Press
+*/
+.press-group h3,
+.press-group h4 {
 	text-align: center;
 }
-.press-white {
-	color: rgba(133, 50, 70, 0.6);
-	margin-top: -5px;
-	text-transform: uppercase;
-	font-size: 14px;
+.press-group {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
 }
-
+.press-container {
+	@include tablet {
+		margin: 0 auto;
+		width: 60%;
+	}
+}
+.press-group-list {
+	@include tablet {
+		float: left;
+		width: 50%;
+	}
+}
 .press-link {
 	font-size: 20px;
 }
+.press-white {
+	color: rgba(133, 50, 70, 0.6);
+	font-size: 14px;
+	margin-top: -5px;
+	text-transform: uppercase;
+}
 /* 
-#
 # Footer Widgets
-#
 */
-.group.widget-group {
+.crwns {
+	padding-right: 15px;
+	width: 2em;
+}
+.footer-logo {
+	margin: 0 auto 80px;
+	width: 130px;
 	@include tablet {
+		float: right;
 		margin-bottom: 0;
+		margin-right: 40px;
+		width: 45px;
+	}
+}
+.site-footer {
+	margin: 120px 50px 20px 50px;
+}
+.social-wrapper {
+	@include tablet {
+		float: left;
+		margin-left: 20px;
 	}
 }
 .widget-group {
 	color: $color-4;
+	margin-top: 20px;
 	@include tablet {
 		float: left;
+		margin-bottom: 0;
 		margin-left: 70px;
 	}
 }
@@ -567,75 +509,54 @@ h4 {
 		margin-left: 0;	
 	}
 }
-.widget-title {
-	text-transform: uppercase;
-	color: $color-1;
-	@include mobile {
-		text-align: center;
-	}
-	@include tablet {
-		text-align: left;
-		font-size: 12px;
-	}
-	@include desktop {
-		font-size: 14px;
-	}
-}
 .widget-text, 
 .widget-text a,
 .widget-text a:visited {
 	color: $color-4;
 	font-family: $font-2;
 	font-size: 16px;
-	text-align: center;
 	margin-top: -7px;
+	text-align: center;
 	@include tablet {
 		font-size: 14px;
 	}
-	@include desktop {
+	@include laptop {
 		font-size: 15px;
 	}
 }
 .widget-text a:hover {
 	color: $color-3;
 }
-.footer-logo {
-	margin: 0 auto 80px;
-	width: 130px;
-	@include tablet {
-		float: right;
-		margin-bottom: 0;
-		width: 45px;
-		margin-right: 40px;
+.widget-title {
+	color: $color-1;
+	font-size: 20px;
+	text-transform: uppercase;
+	@include mobile {
+		text-align: center;
 	}
-}
-.social-wrapper {
 	@include tablet {
-		float: left;
-		margin-left: 20px;
+		font-size: 14px;
+		text-align: left;
 	}
 }
 .year {
-	margin-top: 110px;
-	text-align: center;
-	padding-bottom: 15px;
-	font-family: $font-2;
 	color: $color-1;
-	@include desktop {
+	font-family: $font-2;
+	margin-top: 110px;
+	padding-bottom: 15px;
+	text-align: center;
+	@include laptop {
 		margin-top: 175px;
 	}
 	@include tablet {
-		margin-top: 20px;
-		text-align: left;
 		font-size: 12px;
 		margin-left: 20px;
+		margin-top: 20px;
 		padding-bottom: 10px;
+		text-align: left;
 	}
 	@include tv {
-		width: 1400px;
 		margin: 40px auto 0;
+		width: 1400px;
 	}
-}
-.site-footer {
-	margin: 120px 50px 20px 50px;
 }
