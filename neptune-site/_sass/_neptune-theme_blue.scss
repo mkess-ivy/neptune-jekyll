@@ -1,0 +1,23 @@
+body {
+	background-color: rgba(36,90,135,0.4) !important;
+}
+h2 {
+	color: rgba(173,218,238,0.9);
+	text-shadow: 4px 4px rgba(134,96,22,0.7);
+}
+.site-header a {
+	color: rgba(60,89,148,1);
+}
+.site-header a:hover {
+	color: rgba(216,220,229,1);
+}
+h3 a {
+	color: rgba(62,78,111,1);
+}
+h3 a:hover,
+.widget-text a:hover {
+	color: rgba(216,220,229,1);
+}
+.events-decoration {
+	background: rgba(121,159,173,.35);
+}
