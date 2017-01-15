@@ -143,6 +143,12 @@ h4 {
 		width: 1400px;
 	}
 }
+.wrapper {
+	@include wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+}
 /* 
 # Header
 */
@@ -237,16 +243,22 @@ h4 {
 .play-btn_alt {
 	color: white;
 	font-size: 50px;
-	margin-top: 12vh;
+	margin-top: 6vh;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 500;
 	@include medium {
-		margin-top: 20vh;
+		margin-top: 10vh;
 	}
 	@include mobile {
-		margin-top: 25vh;
+		margin-top: 13vh;
+	}
+	@include laptop {
+		margin-top: 10vh;
+	}
+	@include wrapper {
+		margin-top: 16vh;
 	}
 	/*@include desktop {
 		margin-top: 25vh;
@@ -328,6 +340,17 @@ h4 {
 	}
 	@include laptop {
 		width: 56%;
+	}
+}
+.clear-bio {
+	@include large {
+		margin-top: 160px;
+	}
+	@include wrapper {
+		margin-top: 240px;
+	}
+	@include tv {
+		margin-top: 340px;
 	}
 }
 /* 

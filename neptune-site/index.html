@@ -6,89 +6,91 @@ layout: default
 ---
 <!-- Hero -->
 <div id="preloader"></div>
-<section class="hero-area" id="hero">
-	<div class="hero-img"></div>
-	<div class="hero-text-wrapper">
-		<h1>Neptune</h1>
-		<ul class="subtitle-list">
-			<li>human</li>
-			<li>artist</li>
-			<li>poet</li>
-			<li>speaker</li>
-			<li>activist</li>
-		</ul>
-	</div>
-</section>
-
-<!-- Video + Music -->
-<section class="fullwidth clearfix" id="music">
-	<h2 class="section-heading">music</h2>
-	<div class="video-wrapper">
-		<a href="https://www.facebook.com/neptunethepoet/videos/vb.621616605/10153318037766606/?type=2&theater" target="_blank"><!-- Video Link -->
-			<img data-src="/img/neptune-set-2.jpg" src="/img/ripple.gif" class="primary-img"  />
-			<img data-src="/img/neptune-set-2_black.png" src="/img/ripple.gif" class="shadow-img" />
-			<div class="play-btn_alt">play</div>
-		</a>
-	</div>
-	<!-- {% include soundcloud.html %} -->
-</section>
-
-<!-- Bio -->
-<section class="section-wrapper" id="bio">
-	<h2 class="section-heading_bio">bio</h2>
-	{% include bio.html %}
-</section>
-
-<!-- Media + Upcoming Shows -->
-<section class="section-wrapper clearfix" id="events">
-	<div class="events-img-wrapper">
-		<div class="group events-group photo-group">
-			<img data-src="/img/neptune-set-1.jpg" src="/img/ripple.gif" class="events-primary-img" />
-			<img data-src="/img/neptune-set-1_black.jpg" src="img/ripple.gif" class="events-sub-img" />
+<div class="wrapper">
+	<section class="hero-area" id="hero">
+		<div class="hero-img"></div>
+		<div class="hero-text-wrapper">
+			<h1>Neptune</h1>
+			<ul class="subtitle-list">
+				<li>human</li>
+				<li>artist</li>
+				<li>poet</li>
+				<li>speaker</li>
+				<li>activist</li>
+			</ul>
 		</div>
-		<div class="group events-group photo-group photo-2">
-			<img data-src="/img/neptune-set-3.jpg" src="/img/ripple.gif" class="events-primary-img" />
-			<img data-src="/img/neptune-set-3_black.png" src="/img/ripple.gif" class="events-sub-img" />
-		</div>
-		<div class="group events-group photo-group">
-			<img data-src="/img/neptune-set-2.jpg" src="/img/ripple.gif" class="events-primary-img" />
-			<img data-src="/img/neptune-set-2_black.png" src="/img/ripple.gif" class="events-sub-img" />
-		</div>
-	</div>
-	<div class="events-text-wrapper">
-		<h2 class="alt1 section-heading">upcoming shows</h2>
-		<div class="events-decoration"></div>
-		<ul class="events-list">
-		{% for upcoming-show in site.data.upcoming-shows %}
-			<li class="group">
-				<h3><a href="{{ upcoming-show.link }}" target="_blank" >{{ upcoming-show.place }}</a></h3>
-				<h4 class="event-date">{{ upcoming-show.date }} - {{ upcoming-show.location }}</h4>
-			</li>
-		{% endfor %}
-		</ul>
-		
-	</div>
-</section>
+	</section>
 
-<!-- Press & Publications -->
-<section class="section-wrapper" id="press">
-	<h2 class="section-heading">press</h2>
-		<div class="press-container clearfix">
-			<ul class="press-group-list">
-			{% for press-item in site.data.press-items limit: 3 %}
-				<li class="group press-group">
-					<h3><a class="press-link" href="{{ press-item.link }}" target="_blank">{{ press-item.title }}</a></h3>
-					<h4 class="press-white">{{ press-item.publication }}</h4>
+	<!-- Video + Music -->
+	<section class="fullwidth clearfix" id="music">
+		<h2 class="section-heading">music</h2>
+		<div class="video-wrapper">
+			<a href="https://www.facebook.com/neptunethepoet/videos/vb.621616605/10153318037766606/?type=2&theater" target="_blank"><!-- Video Link -->
+				<img data-src="/img/neptune-set-2.jpg" src="/img/ripple.gif" class="primary-img"  />
+				<img data-src="/img/neptune-set-2_black.png" src="/img/ripple.gif" class="shadow-img" />
+				<div class="play-btn_alt">play</div>
+			</a>
+		</div>
+		<!-- {% include soundcloud.html %} -->
+	</section>
+
+	<!-- Bio -->
+	<section class="section-wrapper clearfix clear-bio" id="bio">
+		<h2 class="section-heading_bio">bio</h2>
+		{% include bio.html %}
+	</section>
+
+	<!-- Media + Upcoming Shows -->
+	<section class="section-wrapper clearfix" id="events">
+		<div class="events-img-wrapper">
+			<div class="group events-group photo-group">
+				<img data-src="/img/neptune-set-1.jpg" src="/img/ripple.gif" class="events-primary-img" />
+				<img data-src="/img/neptune-set-1_black.jpg" src="img/ripple.gif" class="events-sub-img" />
+			</div>
+			<div class="group events-group photo-group photo-2">
+				<img data-src="/img/neptune-set-3.jpg" src="/img/ripple.gif" class="events-primary-img" />
+				<img data-src="/img/neptune-set-3_black.png" src="/img/ripple.gif" class="events-sub-img" />
+			</div>
+			<div class="group events-group photo-group">
+				<img data-src="/img/neptune-set-2.jpg" src="/img/ripple.gif" class="events-primary-img" />
+				<img data-src="/img/neptune-set-2_black.png" src="/img/ripple.gif" class="events-sub-img" />
+			</div>
+		</div>
+		<div class="events-text-wrapper">
+			<h2 class="alt1 section-heading">upcoming shows</h2>
+			<div class="events-decoration"></div>
+			<ul class="events-list">
+			{% for upcoming-show in site.data.upcoming-shows %}
+				<li class="group">
+					<h3><a href="{{ upcoming-show.link }}" target="_blank" >{{ upcoming-show.place }}</a></h3>
+					<h4 class="event-date">{{ upcoming-show.date }} - {{ upcoming-show.location }}</h4>
 				</li>
 			{% endfor %}
 			</ul>
-			<ul class="press-group-list">
-				{% for press-item in site.data.press-items limit: 2 offset: 2 %}
-				<li class="group press-group">
-					<h3><a class="press-link" href="{{ press-item.link }}" target="_blank">{{ press-item.title }}</a></h3>
-					<h4 class="press-white">{{ press-item.publication }}</h4>
-				</li>
-				{% endfor %}
-			</ul>
+			
 		</div>
-</section>
+	</section>
+
+	<!-- Press & Publications -->
+	<section class="section-wrapper" id="press">
+		<h2 class="section-heading">press</h2>
+			<div class="press-container clearfix">
+				<ul class="press-group-list">
+				{% for press-item in site.data.press-items limit: 3 %}
+					<li class="group press-group">
+						<h3><a class="press-link" href="{{ press-item.link }}" target="_blank">{{ press-item.title }}</a></h3>
+						<h4 class="press-white">{{ press-item.publication }}</h4>
+					</li>
+				{% endfor %}
+				</ul>
+				<ul class="press-group-list">
+					{% for press-item in site.data.press-items limit: 2 offset: 2 %}
+					<li class="group press-group">
+						<h3><a class="press-link" href="{{ press-item.link }}" target="_blank">{{ press-item.title }}</a></h3>
+						<h4 class="press-white">{{ press-item.publication }}</h4>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+	</section>
+</div>

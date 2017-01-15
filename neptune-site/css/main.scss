@@ -34,6 +34,8 @@ $on-large:      600px;
 $on-tablet:		750px;
 $on-laptop:	    1000px;
 $on-desktop:    1200px;
+// this is the wrapper that prevents site from being full width for desktop viewport
+$on-wrapper:    1300px;
 $on-tv:         1400px;
 
 @mixin small { 
@@ -74,6 +76,12 @@ $on-tv:         1400px;
 
 @mixin desktop { 
     @media screen and (min-width: #{$on-desktop}) {
+        @content;
+    }
+}
+
+@mixin wrapper { 
+    @media screen and (min-width: #{$on-wrapper}) {
         @content;
     }
 }
