@@ -254,27 +254,11 @@ h4 {
 .play-btn_alt {
 	color: white;
 	font-size: 50px;
-	/*margin-top: 6vh;*/
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 500;
 	max-width: 100%;
-	/*@include medium {
-		margin-top: 10vh;
-	}
-	@include mobile {
-		margin-top: 13vh;
-	}
-	@include laptop {
-		margin-top: 10vh;
-	}
-	@include wrapper {
-		margin-top: 16vh;
-	}*/
-	/*@include desktop {
-		margin-top: 25vh;
-	}*/
 }
 .primary-img {
 	position: absolute;
@@ -336,11 +320,12 @@ h4 {
 	@include tablet {
 		width: 50%;
 	}
-	/*  Waiting to Add Soundcloud Playlist back to layout
+	  /*Waiting to Add Soundcloud Playlist back to layout*/
 	@include tablet {
 		float: left;
-		width: 47%;
-	}*/
+		width: 45%;
+		margin-left: 20px;
+	}
 }
 /* 
 # Bio
@@ -513,6 +498,18 @@ h4 {
 	font-size: 14px;
 	margin-top: -5px;
 	text-transform: uppercase;
+}
+.social-icon-wrapper {
+	text-align: center;
+}
+.social-icon-wrapper i {
+	padding-right: 15px;
+}
+.social-icon-wrapper a {
+	color: black;
+}
+.social-icon-wrapper a:hover {
+	color: rgba(133, 50, 70, 0.6);
 }
 /* 
 # Footer Widgets
